@@ -19,6 +19,7 @@ app.get('/welcome',(req,res)=>{
 })
 
 app.use('/api/auth',require('./routes/user.routes'));
+app.use('/api/addresses',require('./routes/address.routes'));
 
 app.listen(port,()=>{
     console.log(`apk listening on ${port}`);
