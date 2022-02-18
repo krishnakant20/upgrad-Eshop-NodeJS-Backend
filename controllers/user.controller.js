@@ -50,10 +50,11 @@ module.exports.createUser = async (req, res) => {
         const authToken = jwt.sign(dataToken, JWTSECRET);
 
         // STORING JWT TOKEN IN SESSION 
-        req.session['access-token'] = authToken;
+        req.session['auth-token2'] = authToken;
 
         console.log("signup success");
 
+        
         res.status(200).send({
             message: 'user created !',
             user: user,
